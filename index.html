@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMM_GIRL - Профессиональный SMM специалист</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__logo">
+            <a href="#about" class="header__logo-link">SMM GIRL</a>
+          </div>
+
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#about" class="header__nav-link">Обо мне</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#works" class="header__nav-link">Мои работы</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#reviews" class="header__nav-link">Отзывы клиентов</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts" class="header__nav-link">Мои контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button class="header__book-button" id="bookButton">
+            Записаться
+          </button>
+
+          <button class="header__mobile-menu" id="mobileMenuButton">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav__close" id="mobileNavClose">×</button>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#about" class="mobile-nav__link">Обо мне</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#works" class="mobile-nav__link">Мои работы</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#reviews" class="mobile-nav__link">Отзывы клиентов</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#contacts" class="mobile-nav__link">Мои контакты</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about__background"></div>
+        <div class="container">
+          <div class="about__content">
+            <h1 class="about__title">Давайте знакомиться, меня зовут Вика</h1>
+            <p class="about__text">
+              Профессиональный SMM специалист с фокусом на видеоконтент. Создаю
+              уникальные стратегии продвижения в социальных сетях через
+              качественный визуальный контент. Помогаю брендам находить свой
+              голос и увеличивать вовлеченность аудитории.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Works Section -->
+      <section class="works" id="works">
+        <div class="container">
+          <h2 class="works__title">Мои работы</h2>
+          <div class="works__slider">
+            <button
+              class="works__slider-button works__slider-button--prev"
+              id="prevButton"
+            >
+              ←
+            </button>
+
+            <div class="works__slider-container">
+              <div class="works__slider-track" id="sliderTrack">
+                <!-- Works will be added dynamically -->
+              </div>
+            </div>
+
+            <button
+              class="works__slider-button works__slider-button--next"
+              id="nextButton"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="reviews__title">Отзывы моих клиентов</h2>
+          <div class="reviews__grid">
+            <div class="review-card">
+              <div class="review-card__header">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiNFQ0VERTgiLz4KPHN2ZyB4PSIyMCIgeT0iMjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDQwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwIiByPSI1IiBmaWxsPSIjNTQ2MzREIi8+CjxwYXRoIGQ9Ik0xMCAyNUMxMCAyNSAxMi41IDE3LjUgMjAgMTcuNUMyNy41IDE3LjUgMzAgMjUgMzAgMjVIMTBaIiBmaWxsPSIjNTQ2MzREIi8+Cjwvc3ZnPgo8L3N2Zz4K"
+                  alt="Мария"
+                  class="review-card__photo"
+                />
+                <div class="review-card__info">
+                  <h3 class="review-card__name">Мария</h3>
+                  <p class="review-card__profession">Владелец кофейни</p>
+                </div>
+              </div>
+              <p class="review-card__text">
+                Узнала о SMM_GIRL через Instagram. Порадовал профессиональный
+                подход к созданию видеоконтента. За 2 месяца увеличили охваты на
+                300%!
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__header">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiNFQ0VERTgiLz4KPHN2ZyB4PSIyMCIgeT0iMjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDQwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwIiByPSI1IiBmaWxsPSIjNTQ2MzREIi8+CjxwYXRoIGQ9Ik0xMCAyNUMxMCAyNSAxMi41IDE3LjUgMjAgMTcuNUMyNy41IDE3LjUgMzAgMjUgMzAgMjVIMTBaIiBmaWxsPSIjNTQ2MzREIi8+Cjwvc3ZnPgo8L3N2Zz4K"
+                  alt="Алексей"
+                  class="review-card__photo"
+                />
+                <div class="review-card__info">
+                  <h3 class="review-card__name">Алексей</h3>
+                  <p class="review-card__profession">Фотограф</p>
+                </div>
+              </div>
+              <p class="review-card__text">
+                Нашел через рекомендации друзей. SMM_GIRL помогла
+                структурировать контент-план и увеличить вовлеченность. Теперь
+                клиенты приходят регулярно!
+              </p>
+            </div>
+
+            <div class="review-card">
+              <div class="review-card__header">
+                <img
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiNFQ0VERTgiLz4KPHN2ZyB4PSIyMCIgeT0iMjUiIHdpZHRoPSI0MCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDQwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjEwIiByPSI1IiBmaWxsPSIjNTQ2MzREIi8+CjxwYXRoIGQ9Ik0xMCAyNUMxMCAyNSAxMi41IDE3LjUgMjAgMTcuNUMyNy41IDE3LjUgMzAgMjUgMzAgMjVIMTBaIiBmaWxsPSIjNTQ2MzREIi8+Cjwvc3ZnPgo8L3N2Zz4K"
+                  alt="Екатерина"
+                  class="review-card__photo"
+                />
+                <div class="review-card__info">
+                  <h3 class="review-card__name">Екатерина</h3>
+                  <p class="review-card__profession">Бьюти-блогер</p>
+                </div>
+              </div>
+              <p class="review-card__text">
+                Рекомендация от коллеги. Понравился креативный подход к
+                видеосъемке и глубокое понимание целевой аудитории. Результат
+                превзошел ожидания!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts Section -->
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="contacts__title">Мои контакты</h2>
+          <div class="contacts__content">
+            <div class="contacts__info">
+              <p class="contacts__text">
+                Готова к сотрудничеству и новым проектам!
+              </p>
+              <div class="contacts__item">
+                <span class="contacts__label">Telegram:</span>
+                <a href="https://t.me/smm_girl" class="contacts__link"
+                  >@smm_girl</a
+                >
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__label">Instagram:</span>
+                <a href="https://instagram.com/smm_girl" class="contacts__link"
+                  >@smm_girl</a
+                >
+              </div>
+              <div class="contacts__item">
+                <span class="contacts__label">Email:</span>
+                <a href="mailto:hello@smmgirl.ru" class="contacts__link"
+                  >hello@smmgirl.ru</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="#about" class="footer__logo-link">SMM GIRL</a>
+          </div>
+
+          <nav class="footer__nav">
+            <a href="https://instagram.com/smm_girl" class="footer__nav-link"
+              >Instagram</a
+            >
+            <a href="https://t.me/smm_girl" class="footer__nav-link"
+              >Telegram</a
+            >
+            <a href="https://wa.me/79001234567" class="footer__nav-link"
+              >WhatsApp</a
+            >
+          </nav>
+
+          <div class="footer__contacts">
+            <a href="tel:+79001234567" class="footer__phone"
+              >+7 (900) 123-45-67</a
+            >
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2024 SMM_GIRL. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Booking Popup -->
+    <div class="booking-popup" id="bookingPopup">
+      <div class="booking-popup__content">
+        <button class="booking-popup__close" id="closeBookingPopup">×</button>
+        <h2 class="booking-popup__title">Запись на консультацию</h2>
+
+        <form class="booking-form" id="bookingForm">
+          <div class="booking-form__field">
+            <label class="booking-form__label">Имя *</label>
+            <input
+              type="text"
+              name="name"
+              class="booking-form__input"
+              required
+            />
+            <span class="booking-form__error" id="nameError"></span>
+          </div>
+
+          <div class="booking-form__field">
+            <label class="booking-form__label">Телефон *</label>
+            <input
+              type="tel"
+              name="phone"
+              class="booking-form__input"
+              placeholder="+7 (XXX) XXX-XX-XX"
+              required
+            />
+            <span class="booking-form__error" id="phoneError"></span>
+          </div>
+
+          <div class="booking-form__field">
+            <label class="booking-form__label">Telegram</label>
+            <input
+              type="text"
+              name="telegram"
+              class="booking-form__input"
+              placeholder="@username"
+            />
+            <span class="booking-form__error" id="telegramError"></span>
+          </div>
+
+          <div class="booking-form__field">
+            <label class="booking-form__label">Дата консультации *</label>
+            <select name="date" class="booking-form__select" required>
+              <option value="">Выберите дату</option>
+            </select>
+            <span class="booking-form__error" id="dateError"></span>
+          </div>
+
+          <button type="submit" class="booking-form__submit" id="bookingSubmit">
+            Записаться
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,768 @@
+/* CSS Variables */
+:root {
+  --bg-primary: #dadbd9;
+  --bg-secondary: #ecedec;
+  --text-primary: #424b3e;
+  --text-heading: #5c8e47;
+  --logo-color: #54634d;
+  --accent: #5c8e47;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 20px rgba(92, 142, 71, 0.2);
+  --container-width: 1080px;
+}
+
+/* Подключение Birchside Typeface */
+@font-face {
+  font-family: "Birchside";
+  src: url("./fonts/BirchsideTypeface-Regular.woff2") format("woff2"),
+    url("./fonts/BirchsideTypeface-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Birchside";
+  src: url("./fonts/BirchsideTypeface-Regular.woff2") format("woff2"),
+    url("./fonts/BirchsideTypeface-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-secondary);
+  z-index: 100;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(84, 99, 77, 0.2);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--logo-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: var(--transition);
+  opacity: 1;
+  letter-spacing: 0.5px;
+}
+
+.header__logo-link:hover {
+  opacity: 0.7;
+  text-shadow: 2px 2px 4px var(--accent);
+  transition: text-shadow 1.5s ease-in-out;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.header__nav-link {
+  color: var(--logo-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  opacity: 1;
+  position: relative;
+}
+
+.header__nav-link:hover {
+  opacity: 0.7;
+  text-shadow: 1px 1px 2px var(--accent);
+}
+
+.header__nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.header__book-button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.header__book-button:hover {
+  background: var(--logo-color);
+  box-shadow: var(--shadow);
+}
+
+.header__book-button:active {
+  background: var(--bg-primary);
+  color: #333;
+}
+
+.header__mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header__mobile-menu span {
+  width: 25px;
+  height: 3px;
+  background: var(--logo-color);
+  transition: var(--transition);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: var(--bg-secondary);
+  z-index: 99;
+  transition: var(--transition);
+  padding: 80px 30px 30px;
+  border-left: 1px solid rgba(84, 99, 77, 0.2);
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav__close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: var(--logo-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav__list {
+  list-style: none;
+}
+
+.mobile-nav__item {
+  margin-bottom: 20px;
+}
+
+.mobile-nav__link {
+  color: var(--logo-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+  transition: var(--transition);
+}
+
+.mobile-nav__link.active {
+  color: var(--accent);
+}
+
+/* About Section */
+.about {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 60px;
+}
+
+.about__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(218, 219, 217, 0.9),
+      rgba(218, 219, 217, 0.9)
+    ),
+    url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA4MCIgaGVpZ2h0PSI2MDAiIHZpZXdCb3g9IjAgMCAxMDgwIDYwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjEwODAiIGhlaWdodD0iNjAwIiBmaWxsPSIjRURFREVEIi8+CjxwYXRoIGQ9Ik0wIDMwMEgxMDgwTTU0MCAwVjYwMCIgc3Ryb2tlPSIjRDRENEQ0IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+")
+      center/cover;
+  z-index: -1;
+}
+
+.about__content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.about__title {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  color: var(--text-heading);
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.about__text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+/* Works Section */
+.works {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.works__title {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-heading);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.works__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.works__slider-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.works__slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px;
+}
+
+.work-card {
+  flex: 0 0 calc(20% - 16px);
+  background: var(--bg-primary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+.work-card__image {
+  width: 100%;
+  height: 200px;
+  background: var(--logo-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-secondary);
+  font-size: 1rem;
+}
+
+.work-card__content {
+  padding: 20px;
+}
+
+.work-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--text-heading);
+  font-family: "Birchside", "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.work-card__description {
+  font-size: 17px;
+  color: var(--text-primary);
+  opacity: 0.9;
+}
+
+.works__slider-button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works__slider-button:hover {
+  background: var(--logo-color);
+  box-shadow: var(--shadow);
+}
+
+.works__slider-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.reviews__title {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-heading);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background: var(--bg-secondary);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.review-card__photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-primary);
+}
+
+.review-card__info {
+  flex: 1;
+}
+
+.review-card__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-heading);
+  font-family: "Birchside", "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.review-card__profession {
+  font-size: 17px;
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+.review-card__text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Contacts Section */
+.contacts {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.contacts__title {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-heading);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.contacts__content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacts__text {
+  font-size: 17px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(84, 99, 77, 0.2);
+}
+
+.contacts__label {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.contacts__link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 17px;
+}
+
+.contacts__link:hover {
+  opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-primary);
+  padding: 50px 0 30px;
+  border-top: 1px solid rgba(84, 99, 77, 0.2);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer__logo-link {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--logo-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+.footer__logo-link:hover {
+  opacity: 0.7;
+  text-shadow: 2px 2px 4px var(--accent);
+  transition: text-shadow 1.5s ease-in-out;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer__nav-link {
+  color: var(--logo-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 17px;
+}
+
+.footer__nav-link:hover {
+  color: var(--accent);
+}
+
+.footer__phone {
+  color: var(--logo-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(84, 99, 77, 0.2);
+  color: var(--text-primary);
+  opacity: 0.8;
+  font-size: 17px;
+}
+
+/* Booking Popup */
+.booking-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(218, 219, 217, 0.95);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.booking-popup.active {
+  display: flex;
+}
+
+.booking-popup__content {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.booking-popup__close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.booking-popup__close:hover {
+  color: var(--accent);
+}
+
+.booking-popup__title {
+  font-family: "Birchside", "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-heading);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-form__label {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.booking-form__input,
+.booking-form__select {
+  padding: 15px;
+  border: 1px solid rgba(84, 99, 77, 0.3);
+  border-radius: var(--border-radius);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 17px;
+  transition: var(--transition);
+}
+
+.booking-form__input:focus,
+.booking-form__select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(92, 142, 71, 0.1);
+}
+
+.booking-form__input.error,
+.booking-form__select.error {
+  border-color: #e74c3c;
+}
+
+.booking-form__error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  min-height: 18px;
+  display: none;
+}
+
+.booking-form__error.show {
+  display: block;
+}
+
+.booking-form__submit {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+}
+
+.booking-form__submit:hover:not(:disabled) {
+  background: var(--logo-color);
+  box-shadow: var(--shadow);
+}
+
+.booking-form__submit:active {
+  background: var(--bg-primary);
+  color: #333;
+}
+
+.booking-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__mobile-menu {
+    display: flex;
+  }
+
+  .header__book-button {
+    display: none;
+  }
+
+  .about__title {
+    font-size: 2.5rem;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+
+  .works__slider {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .works__slider-button {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .work-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .reviews__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer__nav {
+    justify-content: center;
+  }
+
+  .contacts__item {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .review-card__text,
+  .contacts__text,
+  .contacts__label,
+  .contacts__link,
+  .footer__nav-link,
+  .footer__phone {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .work-card {
+    flex: 0 0 100%;
+  }
+
+  .booking-popup__content {
+    padding: 30px 20px;
+  }
+}
